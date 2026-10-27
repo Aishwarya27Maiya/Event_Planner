@@ -1,0 +1,221 @@
+.choice-page {
+  min-height: 100vh;
+  padding-bottom: 32px;
+  background: radial-gradient(ellipse at 86% 4%, rgba(215,173,105,.12), transparent 30%), #f7f6f1;
+}
+
+.planner-topbar {
+  min-height: 68px;
+  padding: 0 clamp(18px, 6vw, 82px);
+  border-bottom: 1px solid #e6e5de;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  background: rgba(255,255,255,.94);
+}
+
+.text-back {
+  justify-self: start;
+  padding: 8px 0;
+  border: 0;
+  background: transparent;
+  color: #65756a;
+  font-size: .76rem;
+  font-weight: 700;
+}
+
+.text-back:hover { color: #203b35; }
+
+.brand-mark {
+  color: #203b35;
+  font: 700 1.15rem Georgia, "Times New Roman", serif;
+  letter-spacing: -.04em;
+}
+
+.brand-mark span { color: #bf9b62; }
+
+.topbar-note {
+  justify-self: end;
+  color: #89928b;
+  font-size: .7rem;
+}
+
+.choice-intro {
+  width: min(940px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: clamp(44px, 8vh, 78px) 0 0;
+  text-align: center;
+}
+
+.choice-intro h1 {
+  margin-top: 9px;
+  color: #1d302c;
+  font: 500 clamp(2.5rem, 6vw, 4.3rem)/1.04 Georgia, "Times New Roman", serif;
+  letter-spacing: -.055em;
+}
+
+.choice-intro > p:last-child {
+  max-width: 550px;
+  margin: 14px auto 0;
+  color: #7d8780;
+  font-size: .88rem;
+  line-height: 1.7;
+}
+
+.event-type-cards {
+  width: min(990px, calc(100% - 40px));
+  margin: 35px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 16px;
+}
+
+.event-type-card {
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid #e1e2db;
+  border-radius: 4px;
+  background: rgba(255,255,255,.9);
+  color: #2b4036;
+}
+
+button.event-type-card {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: left;
+  transition: border-color 150ms ease, transform 150ms ease, box-shadow 150ms ease;
+}
+
+button.event-type-card:hover {
+  transform: translateY(-2px);
+  border-color: #b7a37d;
+  box-shadow: 0 9px 24px rgba(32,59,53,.07);
+}
+
+.choice-icon {
+  width: 43px;
+  height: 43px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #eff1eb;
+  color: #577260;
+  font-size: 1.2rem;
+}
+
+.event-type-card > .eyebrow {
+  font-size: .59rem;
+}
+
+.event-type-card > strong {
+  margin-top: 8px;
+  display: block;
+  color: #21382e;
+  font: 500 1.65rem Georgia, "Times New Roman", serif;
+}
+
+.personal-choice > .personal-choice-prompt {
+  display: block;
+  margin-top: 10px;
+  color: #596c5e;
+  font-size: .79rem;
+  font-weight: 700;
+}
+
+.personal-choice > .personal-choice-description {
+  display: block;
+  margin-top: 4px;
+}
+
+.event-type-card > span:not(.choice-icon):not(.eyebrow) {
+  margin-top: 9px;
+  color: #818b84;
+  font-size: .76rem;
+  line-height: 1.65;
+}
+
+.choice-link {
+  width: 100%;
+  margin-top: auto !important;
+  padding-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #456451 !important;
+  font-size: .75rem !important;
+  font-weight: 750;
+}
+
+.choice-link b { font-size: 1.1rem; }
+
+.occasion-groups {
+  width: 100%;
+  margin-top: 18px;
+}
+
+.occasion-group + .occasion-group {
+  margin-top: 15px;
+  padding-top: 14px;
+  border-top: 1px solid #ecece7;
+}
+
+.occasion-group h3 {
+  margin-bottom: 8px;
+  color: #43584a;
+  font-size: .7rem;
+  font-weight: 750;
+}
+
+.occasion-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.occasion-chips button {
+  padding: 8px 9px;
+  border: 1px solid #e4e6df;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  background: #fff;
+  color: #405649;
+  font-size: .68rem;
+  font-weight: 700;
+  text-align: left;
+  transition: background-color 140ms ease, border-color 140ms ease;
+}
+
+.occasion-chips button:hover {
+  border-color: #6d8b75;
+  background: #f1f5ef;
+}
+
+.occasion-chips button span {
+  color: #89938b;
+  font-size: .59rem;
+  font-weight: 500;
+}
+
+.estimate-disclaimer {
+  width: min(990px, calc(100% - 40px));
+  margin: 18px auto 0;
+  color: #929a93;
+  font-size: .66rem;
+  text-align: center;
+}
+
+@media (max-width: 680px) {
+  .planner-topbar { grid-template-columns: 1fr auto 1fr; min-height: 62px; padding: 0 13px; }
+  .topbar-note { font-size: .6rem; text-align: right; }
+  .brand-mark { font-size: 1rem; }
+  .event-type-cards { grid-template-columns: 1fr; }
+  .event-type-card { padding: 20px; }
+  .choice-link { padding-top: 17px; }
+  .occasion-chips button { flex: 1 1 44%; }
+}
